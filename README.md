@@ -56,7 +56,8 @@ See it deployed here: https://tmaria17.github.io/sweater-weather-fe/
 ## UI/UX
 ### I used these sites for inspiration: 
 * https://www.crowdrise.com/ 
-
+* https://www.spikenow.com/?ref=lapaninja
+* http://wthr.co/
 
 ## Built With
 
