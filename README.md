@@ -53,6 +53,10 @@ Once the server is running, visit in your browser:
 ## GitHub Pages
 See it deployed here: https://tmaria17.github.io/sweater-weather-fe/
 
+## UI/UX
+### I used these sites for inspiration: 
+* https://www.crowdrise.com/ I
+
 
 ## Built With
 
