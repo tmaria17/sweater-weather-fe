@@ -58,7 +58,7 @@ See it deployed here: https://tmaria17.github.io/sweater-weather-fe/
 * https://www.crowdrise.com/ 
 * https://www.spikenow.com/?ref=lapaninja
 * http://wthr.co/
-
+* https://icosyndicate.org/?ref=lapaninjahttps://icosyndicate.org/?ref=lapaninjahttps://icosyndicate.org/?ref=lapaninja
 ## Built With
 
 * [JavaScript](https://www.javascript.com/)
