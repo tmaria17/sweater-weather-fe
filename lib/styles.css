@@ -1,5 +1,8 @@
 body {
   background-color: #fefcee;
+  background-image: url(../assets/sweater_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
   padding: 0;
 }
@@ -8,10 +11,10 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  height: 75px;
+  height: 50px;
   overflow: hidden;
   font-family: 'Fredericka the Great', cursive;
   color: #364248;
-  font-size: 50px;
-  background-color: #be89fa;
+  font-size: 25px;
+  background-color: #fefcee;
 }
