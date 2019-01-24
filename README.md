@@ -1,4 +1,11 @@
 # Self-Directed Front-End Start Kit
+## Introduction
+-How to use
+-Known Issues
+-How to contribute
+-Core Contributers
+-Running Tests
+-Tech Stack Lis
 
 ## Initial Setup
 
@@ -49,6 +56,17 @@ Once the server is running, visit in your browser:
 
 * `http://localhost:8080/` to run your application.
 
+## Running Tests
+
+## How to Use
+
+## Known Issues
+
+## How to Contribute 
+
+## Core Contributers
+
+## Tech Stack
 
 ## GitHub Pages
 See it deployed here: https://tmaria17.github.io/sweater-weather-fe/
