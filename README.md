@@ -1,11 +1,7 @@
 # Self-Directed Front-End Start Kit
 ## Introduction
--How to use
--Known Issues
--How to contribute
--Core Contributers
--Running Tests
--Tech Stack Lis
+See it deployed here: https://tmaria17.github.io/sweater-weather-fe/
+
 
 ## Initial Setup
 
@@ -67,9 +63,6 @@ Once the server is running, visit in your browser:
 ## Core Contributers
 
 ## Tech Stack
-
-## GitHub Pages
-See it deployed here: https://tmaria17.github.io/sweater-weather-fe/
 
 ## UI/UX
 ### I used these sites for inspiration: 
