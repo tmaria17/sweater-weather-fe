@@ -1,5 +1,6 @@
 body {
   background-color: #fefcee;
+  font-family: Helvetica, sans-serif;
   background-image: url(../assets/sweater_1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -48,7 +49,7 @@ ul {
   grid-template-columns: auto auto;
 }
 .inner-div{
-  float:right
+
 }
 .btn{
   background-color: #ad1877;
@@ -56,6 +57,9 @@ ul {
 
 #forecast-sum{
   color: black;
+  display: flex;
+  grid-template-columns: auto auto;
+  font-size: 10px
 }
 
 #summary-box{
