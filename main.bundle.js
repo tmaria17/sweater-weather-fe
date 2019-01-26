@@ -46,7 +46,6 @@
 
 	"use strict";
 
-	//
 	var locbutton = document.getElementById("location-btn");
 
 	function getWeather() {
