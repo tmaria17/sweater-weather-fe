@@ -18,3 +18,40 @@ ul {
   font-size: 25px;
   background-color: #fefcee;
 }
+
+.overlay-location{
+  background-color: #364248;
+  border-radius: 25px;
+  opacity: 0.5;
+  margin: 8px;
+  padding: 8px;
+}
+
+.overlay{
+  color: #DA6628;
+  font-style: bold;
+  font-size: 20px;
+  font-weight: bolder;
+  border-radius: 25px;
+  background: #364248;
+  opacity: 0.8;
+  width: 70%;
+  height: 150px;
+  margin: 10px;
+  padding: 10px;
+  display: inline-block;
+
+}
+
+.top-container{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.btn{
+  background-color: #ad1877;
+}
+#summary-box{
+  width: fill;
+  height: fill;
+
+}
