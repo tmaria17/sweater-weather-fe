@@ -44,12 +44,20 @@ ul {
 }
 
 .top-container{
-  display: grid;
+  display: flex;
   grid-template-columns: auto auto;
+}
+.inner-div{
+  float:right
 }
 .btn{
   background-color: #ad1877;
 }
+
+#forecast-sum{
+  color: black;
+}
+
 #summary-box{
   width: fill;
   height: fill;
