@@ -49,6 +49,7 @@
 	var locbutton = document.getElementById("location-btn");
 	var forecastSum = document.getElementById("forecast-sum");
 	var currentTemp = document.getElementById("current-temp");
+	locbutton.addEventListener("click", getForecastByCity);
 
 	function getForecastByCity() {
 	  var location = document.getElementById("location-field").value;
@@ -56,18 +57,24 @@
 	  request.open('GET', "https://safe-reaches-47529.herokuapp.com/api/v1/forecast?location=" + location);
 	  request.onload = function () {
 	    var forecastData = JSON.parse(request.responseText).data.attributes;
-	    console.log(forecastData);
-	    createWeather(forecastData);
+	    createWeatherOverview(forecastData);
+	    createWeatherDetails(forecastData);
 	  };
 	  request.send();
 	}
-	locbutton.addEventListener("click", getForecastByCity);
 
-	function createWeather(responseData) {
+	function createWeatherOverview(responseData) {
 	  var today = responseData.daily_weather[0];
 	  var location = document.getElementById("location-field").value;
 	  var date = new Date();
-	  $("#forecast-sum").append("<h8>" + responseData.current_weather.summary + "</h8></br>\n      <h8>" + responseData.current_weather.temperature + "&deg</h8>\n      <p>High:" + today.temp_high + "&deg Low:" + today.temp_low + "&deg</p>\n      <h3>" + location + "<h10><a font-weight=\"normal\"href=\"url\">Change Location</a> <a font-weight=\"normal\"href=\"url\">Favorite</a><h10><h3>\n      <div class=\"inner-div\"></div>");
+	  $("#forecast-sum").append("<div>\n        <h8 id=\"test-id\">" + responseData.current_weather.summary + "</h8></br>\n        <h8>" + responseData.current_weather.temperature + "&deg</h8>\n        <p>High:" + today.temp_high + "&deg Low:" + today.temp_low + "&deg</p>\n      </div>\n      <div>\n      <h3>" + location + "</h3>\n      </div>\n      <div>\n        <a font-weight=\"normal\"href=\"url\">Change Location</a>\n        <a font-weight=\"normal\"href=\"url\">Favorite</a>\n      </div>");
+	}
+
+	function createWeatherDetails(detailData) {
+	  var currentForecast = detailData.current_weather;
+	  var today = detailData.daily_weather[0];
+	  var tonight = detailData.hourly_weather[6];
+	  $("#forecast-details").append("<div>\n        <h2>Details</h2>\n        <h6 id=\"test-id\">" + currentForecast.summary + "</h6></br>\n        <h8>Today: " + today.summary + "</h8>\n        <h8>Tonight: " + tonight.summary + "</h8>\n         </div>\n         <div>\n         <p>Feels Like:" + currentForecast.feels_like + "&deg</p>\n         <p>Humidity:" + currentForecast.humidity + "%</p>\n         <p>Visibility:" + currentForecast.visibility + " miles</p>\n         <p>Uv Index:" + currentForecast.uv_index + "</p>\n         </div>");
 	}
 
 /***/ })

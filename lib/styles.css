@@ -62,6 +62,13 @@ ul {
   font-size: 10px
 }
 
+#forecast-details{
+  color: black;
+  display: flex;
+  grid-template-columns: auto auto;
+  font-size: 10px
+}
+
 #summary-box{
   width: fill;
   height: fill;
