@@ -74,7 +74,7 @@
 	  var currentForecast = detailData.current_weather;
 	  var today = detailData.daily_weather[0];
 	  var tonight = detailData.hourly_weather[6];
-	  $("#forecast-details").append("<div>\n        <h2>Details</h2>\n        <h6 id=\"test-id\">" + currentForecast.summary + "</h6></br>\n        <h8>Today: " + today.summary + "</h8>\n        <h8>Tonight: " + tonight.summary + "</h8>\n         </div>\n         <div>\n         <p>Feels Like:" + currentForecast.feels_like + "&deg</p>\n         <p>Humidity:" + currentForecast.humidity + "%</p>\n         <p>Visibility:" + currentForecast.visibility + " miles</p>\n         <p>Uv Index:" + currentForecast.uv_index + "</p>\n         </div>");
+	  $("#forecast-details").append("<div>\n        <h2>Details</h2>\n        <h3 id=\"test-id\">" + currentForecast.summary + "</h3></br>\n        <p>Today: " + today.summary + "</p>\n        <p>Tonight: " + tonight.summary + "</p>\n         </div>\n         <div>\n         <p>Feels Like: " + currentForecast.feels_like + "&deg</p>\n         <p>Humidity: " + currentForecast.humidity + "%</p>\n         <p>Visibility: " + currentForecast.visibility + " miles</p>\n         <p>Uv Index: " + currentForecast.uv_index + "</p>\n         </div>");
 	}
 
 /***/ })
