@@ -57,6 +57,7 @@
 	  request.open('GET', "https://safe-reaches-47529.herokuapp.com/api/v1/forecast?location=" + location);
 	  request.onload = function () {
 	    var forecastData = JSON.parse(request.responseText).data.attributes;
+	    console.log(forecastData);
 	    createWeatherOverview(forecastData);
 	    createWeatherDetails(forecastData);
 	    createHourlySummary(forecastData);
@@ -97,7 +98,7 @@
 	  var dayFour = dailyData.daily_weather[3];
 	  var dayFive = dailyData.daily_weather[4];
 
-	  $("#weekly-summary").append("\n        <div><p>Monday: </p> <p>Tuesday: </p> <p>Wednesday: </p> <p>Thursday: </p> <p>Friday: </p> </div>\n        <div><p>" + dayOne.icon + "</p> <p " + dayTwo.icon + "</p> <p>" + dayThree.icon + "</p> <p> " + dayFour.icon + "</p> <p>" + dayFive.icon + "</p></div>\n        <div><p>" + dayOne.chance_of_rain + "</p> <p " + dayTwo.chance_of_rain + "</p> <p>" + dayThree.chance_of_rain + "</p> <p> " + dayFour.chance_of_rain + "</p> <p>" + dayFive.chance_of_rain + "</p> </div>\n        <div><p>" + dayOne.temp_high + "</p> <p " + dayTwo.temp_high + "</p> <p>" + dayThree.temp_high + "</p> <p> " + dayFour.temp_high + "</p> <p>" + dayFive.temp_high + "</p> </div>\n        <div><p>" + dayOne.temp_low + "</p> <p " + dayTwo.temp_low + "</p> <p>" + dayThree.temp_low + "</p> <p> " + dayFour.temp_low + "</p> <p>" + dayFive.temp_low + "</p></div>\n        ");
+	  $("#weekly-summary").append("\n        <div>\n          <p>Monday: </p>\n          <p>Tuesday: </p>\n          <p>Wednesday: </p>\n          <p>Thursday: </p>\n          <p>Friday: </p>\n          </div>\n        <div>\n          <p>" + dayOne.icon + " </p>\n          <p>" + dayTwo.icon + " </p>\n          <p>" + dayThree.icon + " </p>\n          <p>" + dayFour.icon + " </p>\n          <p>" + dayFive.icon + " </p>\n        </div>\n        <div>\n          <p>" + dayOne.chance_of_rain + " </p>\n          <p>" + dayTwo.chance_of_rain + " </p>\n          <p>" + dayThree.chance_of_rain + " </p>\n          <p>" + dayFour.chance_of_rain + " </p>\n          <p>" + dayFive.chance_of_rain + " </p>\n          </div>\n        <div>\n          <p>" + dayOne.temp_high + "&deg </p>\n          <p " + dayTwo.temp_high + "&deg </p>\n          <p>" + dayThree.temp_high + "&deg </p>\n          <p>" + dayFour.temp_high + "&deg </p>\n          <p>" + dayFive.temp_high + "&deg </p>\n           </div>\n        <div>\n          <p>" + dayOne.temp_low + "&deg</p>\n          <p>" + dayTwo.temp_low + "&deg</p>\n          <p>" + dayThree.temp_low + "&deg</p>\n          <p>" + dayFour.temp_low + "&deg</p>\n          <p>" + dayFive.temp_low + "&deg</p>\n          </div>\n        ");
 	}
 
 /***/ })
