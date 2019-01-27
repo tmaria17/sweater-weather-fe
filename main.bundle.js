@@ -59,6 +59,7 @@
 	    var forecastData = JSON.parse(request.responseText).data.attributes;
 	    createWeatherOverview(forecastData);
 	    createWeatherDetails(forecastData);
+	    createHourlySummary(forecastData);
 	  };
 	  request.send();
 	}
@@ -76,6 +77,17 @@
 	  var tonight = detailData.hourly_weather[6];
 	  $("#forecast-details").append("<div>\n        <h2>Details</h2>\n        <h3 id=\"test-id\">" + currentForecast.summary + "</h3></br>\n        <p>Today: " + today.summary + "</p>\n        <p>Tonight: " + tonight.summary + "</p>\n         </div>\n         <div>\n         <p>Feels Like: " + currentForecast.feels_like + "&deg</p>\n         <p>Humidity: " + currentForecast.humidity + "%</p>\n         <p>Visibility: " + currentForecast.visibility + " miles</p>\n         <p>Uv Index: " + currentForecast.uv_index + "</p>\n         </div>");
 	}
+
+	function createHourlySummary(hourlyData) {
+	  var hourOne = hourlyData.hourly_weather[0];
+	  var hourTwo = hourlyData.hourly_weather[1];
+	  var hourThree = hourlyData.hourly_weather[2];
+	  var hourFour = hourlyData.hourly_weather[3];
+	  var hourFive = hourlyData.hourly_weather[4];
+	  var hourSix = hourlyData.hourly_weather[5];
+
+	  $("#summary-hours").append("\n        <div> <p>" + hourOne.time + "</p> <p>" + hourOne.temperature + "&deg</p></div>\n        <div><p>" + hourTwo.time + "</p> <p>" + hourTwo.temperature + "&deg</p> </div>\n        <div><p>" + hourThree.time + "</p> <p>" + hourThree.temperature + "&deg</p>  </div>\n        <div><p>" + hourFour.time + "</p> <p>" + hourFour.temperature + "&deg</p>  </div>\n        <div><p>" + hourFive.time + "</p> <p>" + hourFive.temperature + "&deg</p> </div>\n        <div><p>" + hourSix.time + "</p> <p>" + hourSix.temperature + "&deg</p>  </div>\n        ");
+	};
 
 /***/ })
 /******/ ]);
