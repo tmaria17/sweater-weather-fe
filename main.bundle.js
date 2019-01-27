@@ -60,6 +60,7 @@
 	    createWeatherOverview(forecastData);
 	    createWeatherDetails(forecastData);
 	    createHourlySummary(forecastData);
+	    createWeeklyOverview(forecastData);
 	  };
 	  request.send();
 	}
@@ -68,7 +69,7 @@
 	  var today = responseData.daily_weather[0];
 	  var location = document.getElementById("location-field").value;
 	  var date = new Date();
-	  $("#forecast-sum").append("<div>\n        <h8 id=\"test-id\">" + responseData.current_weather.summary + "</h8></br>\n        <h8>" + responseData.current_weather.temperature + "&deg</h8>\n        <p>High:" + today.temp_high + "&deg Low:" + today.temp_low + "&deg</p>\n      </div>\n      <div>\n      <h3>" + location + "</h3>\n      </div>\n      <div>\n        <a font-weight=\"normal\"href=\"url\">Change Location</a>\n        <a font-weight=\"normal\"href=\"url\">Favorite</a>\n      </div>");
+	  $("#forecast-sum").append("<div>\n        <h8 id=\"test-id\">" + responseData.current_weather.summary + "</h8></br>\n        <h8>" + responseData.current_weather.temperature + "&deg</h8>\n        <p>High:" + today.temp_high + "&deg Low:" + today.temp_low + "&deg</p>\n      </div>\n      <div>\n      <h3>" + location + "</h3>\n      </div>\n      <div>\n        <p><a font-weight=\"normal\"href=\"url\">Change Location</a></p>\n        <p><a font-weight=\"normal\"href=\"url\">Favorite</a></p>\n      </div>");
 	}
 
 	function createWeatherDetails(detailData) {
@@ -88,6 +89,16 @@
 
 	  $("#summary-hours").append("\n        <div> <p>" + hourOne.time + "</p> <p>" + hourOne.temperature + "&deg</p></div>\n        <div><p>" + hourTwo.time + "</p> <p>" + hourTwo.temperature + "&deg</p> </div>\n        <div><p>" + hourThree.time + "</p> <p>" + hourThree.temperature + "&deg</p>  </div>\n        <div><p>" + hourFour.time + "</p> <p>" + hourFour.temperature + "&deg</p>  </div>\n        <div><p>" + hourFive.time + "</p> <p>" + hourFive.temperature + "&deg</p> </div>\n        <div><p>" + hourSix.time + "</p> <p>" + hourSix.temperature + "&deg</p>  </div>\n        ");
 	};
+
+	function createWeeklyOverview(dailyData) {
+	  var dayOne = dailyData.daily_weather[0];
+	  var dayTwo = dailyData.daily_weather[1];
+	  var dayThree = dailyData.daily_weather[2];
+	  var dayFour = dailyData.daily_weather[3];
+	  var dayFive = dailyData.daily_weather[4];
+
+	  $("#weekly-summary").append("\n        <div><p>Monday: </p> <p>Tuesday: </p> <p>Wednesday: </p> <p>Thursday: </p> <p>Friday: </p> </div>\n        <div><p>" + dayOne.icon + "</p> <p " + dayTwo.icon + "</p> <p>" + dayThree.icon + "</p> <p> " + dayFour.icon + "</p> <p>" + dayFive.icon + "</p></div>\n        <div><p>" + dayOne.chance_of_rain + "</p> <p " + dayTwo.chance_of_rain + "</p> <p>" + dayThree.chance_of_rain + "</p> <p> " + dayFour.chance_of_rain + "</p> <p>" + dayFive.chance_of_rain + "</p> </div>\n        <div><p>" + dayOne.temp_high + "</p> <p " + dayTwo.temp_high + "</p> <p>" + dayThree.temp_high + "</p> <p> " + dayFour.temp_high + "</p> <p>" + dayFive.temp_high + "</p> </div>\n        <div><p>" + dayOne.temp_low + "</p> <p " + dayTwo.temp_low + "</p> <p>" + dayThree.temp_low + "</p> <p> " + dayFour.temp_low + "</p> <p>" + dayFive.temp_low + "</p></div>\n        ");
+	}
 
 /***/ })
 /******/ ]);
