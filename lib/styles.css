@@ -56,10 +56,10 @@ ul {
 }
 
 #forecast-sum{
-  color: black;
+  color: #EFF0F0;
   display: flex;
   grid-template-columns: auto auto;
-  font-size: 10px
+  font-size: 15px
 }
 .hidden{
   visibility:  hidden;
@@ -67,17 +67,11 @@ ul {
 }
 
 #forecast-details{
-  color: black;
-  display: flex;
-  grid-template-columns: auto auto;
-  font-size: 10px
-}
+  color: #EFF0F0;
 
-#forecast-details{
-  color: black;
   display: flex;
   grid-template-columns: auto auto;
-  font-size: 10px
+  font-size: 16px
 }
 
 #summary-box{
@@ -85,16 +79,18 @@ ul {
   height: auto;
 }
 #summary-hours{
-  color: black;
+  color: #EFF0F0;
+
   display: flex;
   grid-template-columns: auto auto auto auto auto auto auto auto;
-  font-size: 10px
+  font-size: 20px
 }
 #weekly-summary{
-  color: black;
+  color: #EFF0F0;
+
   display: flex;
   grid-template-columns: auto auto auto auto auto;
-  font-size: 10px
+  font-size: 15px
   justify-content: space-evenly;
   padding-right: 30px;
 }
@@ -108,5 +104,15 @@ ul {
 }
 #temp{
   font-size: 30px
+}
 
+.smaller-text{
+  font-size: 10px
+}
+
+.links{
+  color: #DA621E;
+}
+#hour-icon{
+  size: 20px
 }
