@@ -67,20 +67,6 @@
 	// }
 
 	$(document).ready(function () {
-	  $("#favorite-button").on('click', function (event) {
-	    event.preventDefault();
-	    event.stopPropagation();
-	    console.log("click");
-	    var location = document.getElementById("location-field").value;
-	    $.ajax({
-	      type: "POST",
-	      url: "https://safe-reaches-47529.herokuapp.com/api/v1/favorites",
-	      data: { api_key: "D6iMSXb0WmDw4qSwyv4YeQ", location: location },
-	      success: function success(result) {
-	        alert(location + " has been added to your favorites!");
-	      }
-	    });
-	  });
 	  $("#location-btn").on('click', function () {
 	    var location = document.getElementById("location-field").value;
 	    $.ajax({
@@ -92,10 +78,28 @@
 	        createWeatherDetails(weatherData);
 	        createHourlySummary(weatherData);
 	        createWeeklyOverview(weatherData);
+	        addFavorite();
 	      }
 	    });
 	  });
 	});
+
+	function addFavorite() {
+	  $("#favorite-button").on('click', function (event) {
+	    event.preventDefault();
+	    event.stopPropagation();
+	    console.log("click");
+	    var location = document.getElementById("location-field").value;
+	    $.ajax({
+	      type: "POST",
+	      url: "https://safe-reaches-47529.herokuapp.com/api/v1/favorites",
+	      data: { api_key: "ALIwoEoZo_Rr92Fj5GlCYg", location: location },
+	      success: function success(result) {
+	        alert(location + " has been added to your favorites!");
+	      }
+	    });
+	  });
+	}
 
 	function createWeatherOverview(responseData) {
 	  console.log(responseData);
@@ -103,7 +107,7 @@
 	  var today = responseData.daily_weather[0];
 	  var location = document.getElementById("location-field").value;
 	  var date = new Date();
-	  $("#forecast-sum").append("<div>\n        <h8 id=\"test-id\">" + responseData.current_weather.summary + "</h8></br>\n        <h8>" + responseData.current_weather.temperature + "&deg</h8>\n        <p>High:" + today.temp_high + "&deg Low:" + today.temp_low + "&deg</p>\n      </div>\n      <div>\n      <h3>" + location + "</h3>\n      </div>\n      <div>\n        <p><a font-weight=\"normal\"href=\"url\">Change Location</a></p>\n        <p><a font-weight=\"normal\" id=\"favorite-button\" href=\"\">Favorite</a></p>\n      </div>");
+	  $("#forecast-sum").append("<div>\n        <h8 id=\"test-id\">" + responseData.current_weather.summary + "</h8></br>\n        <h8>" + responseData.current_weather.temperature + "&deg</h8>\n        <p>High:" + today.temp_high + "&deg Low:" + today.temp_low + "&deg</p>\n      </div>\n      <div>\n      <h3>" + location + "</h3>\n      </div>\n      <div>\n        <p><a font-weight=\"normal\"href=\"url\">Change Location </a></p>\n        <p><a font-weight=\"normal\" id=\"favorite-button\" href=\"\">Favorite</a></p>\n      </div>");
 	}
 
 	function createWeatherDetails(detailData) {
@@ -131,7 +135,7 @@
 	  var dayFour = dailyData.daily_weather[3];
 	  var dayFive = dailyData.daily_weather[4];
 
-	  $("#weekly-summary").append("\n        <div>\n          <p>Monday: </p>\n          <p>Tuesday: </p>\n          <p>Wednesday: </p>\n          <p>Thursday: </p>\n          <p>Friday: </p>\n          </div>\n        <div>\n          <p>" + dayOne.icon + " </p>\n          <p>" + dayTwo.icon + " </p>\n          <p>" + dayThree.icon + " </p>\n          <p>" + dayFour.icon + " </p>\n          <p>" + dayFive.icon + " </p>\n        </div>\n        <div>\n          <p>" + dayOne.chance_of_rain + " </p>\n          <p>" + dayTwo.chance_of_rain + " </p>\n          <p>" + dayThree.chance_of_rain + " </p>\n          <p>" + dayFour.chance_of_rain + " </p>\n          <p>" + dayFive.chance_of_rain + " </p>\n          </div>\n        <div>\n          <i class=\"wi wi-direction-up\"></i>\n          <p>" + dayOne.temp_high + "&deg </p>\n          <i class=\"wi wi-direction-up\"></i>\n          <p " + dayTwo.temp_high + "&deg </p>\n          <i class=\"wi wi-direction-up\"></i>\n          <p>" + dayThree.temp_high + "&deg </p>\n          <i class=\"wi wi-direction-up\"></i>\n          <p>" + dayFour.temp_high + "&deg </p>\n          <p>\n          <i class=\"wi wi-direction-up\"></i>\n          " + dayFive.temp_high + "&deg </p>\n           </div>\n        <div>\n          <p>" + dayOne.temp_low + "&deg</p>\n          <p>" + dayTwo.temp_low + "&deg</p>\n          <p>" + dayThree.temp_low + "&deg</p>\n          <p>" + dayFour.temp_low + "&deg</p>\n          <p>" + dayFive.temp_low + "&deg</p>\n          </div>\n        ");
+	  $("#weekly-summary").append("\n        <div>\n          <p>Monday: </p>\n          <p>Tuesday: </p>\n          <p>Wednesday: </p>\n          <p>Thursday: </p>\n          <p>Friday: </p>\n          </div>\n        <div>\n          <p>" + dayOne.icon + " </p>\n          <p>" + dayTwo.icon + " </p>\n          <p>" + dayThree.icon + " </p>\n          <p>" + dayFour.icon + " </p>\n          <p>" + dayFive.icon + " </p>\n        </div>\n        <div>\n          <p>" + dayOne.chance_of_rain + " </p>\n          <p>" + dayTwo.chance_of_rain + " </p>\n          <p>" + dayThree.chance_of_rain + " </p>\n          <p>" + dayFour.chance_of_rain + " </p>\n          <p>" + dayFive.chance_of_rain + " </p>\n          </div>\n        <div>\n          <i class=\"wi wi-direction-up\"></i>\n          <p>" + dayOne.temp_high + "&deg </p>\n          <i class=\"wi wi-direction-up\"></i>\n          <p " + dayTwo.temp_high + "&deg </p>\n          <i class=\"wi wi-direction-up\"></i>\n          <p>" + dayThree.temp_high + "&deg </p>\n          <i class=\"wi wi-direction-up\"></i>\n          <p>" + dayFour.temp_high + "&deg </p>\n          <i class=\"wi wi-direction-up\"></i>\n          <p>" + dayFive.temp_high + "&deg </p>\n           </div>\n        <div>\n          <p><i class=\"wi wi-direction-down\"></i></p>\n          <p>" + dayOne.temp_low + "&deg</p>\n          <p><i class=\"wi wi-direction-down\"></i></p>\n          <p>" + dayTwo.temp_low + "&deg</p>\n          <p><i class=\"wi wi-direction-down\"></i></p>\n          <p>" + dayThree.temp_low + "&deg</p>\n          <p><i class=\"wi wi-direction-down\"></i></p>\n          <p>" + dayFour.temp_low + "&deg</p>\n          <p><i class=\"wi wi-direction-down\"></i></p>\n          <p>" + dayFive.temp_low + "&deg</p>\n          </div>\n        ");
 	}
 
 /***/ })
