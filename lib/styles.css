@@ -80,10 +80,13 @@ ul {
 }
 #summary-hours{
   color: #EFF0F0;
-
   display: flex;
   grid-template-columns: auto auto auto auto auto auto auto auto;
-  font-size: 20px
+  font-size: 20px;
+}
+
+#hour-div{
+  padding-right: 30px;
 }
 #weekly-summary{
   color: #EFF0F0;
