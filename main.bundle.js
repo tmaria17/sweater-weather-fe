@@ -91,14 +91,14 @@
 	  var today = responseData.daily_weather[0];
 	  var location = document.getElementById("location-field").value;
 	  var date = new Date();
-	  $("#forecast-sum").append("<div>\n        <h8 id=\"test-id\">" + responseData.current_weather.summary + "</h8></br>\n        <div><i class=\"wi wi-snow\"></i></div>\n        <h8>" + responseData.current_weather.temperature + "&deg</h8>\n        <p>High:" + today.temp_high + "&deg Low:" + today.temp_low + "&deg</p>\n      </div>\n      <div>\n      <h3>" + location + "</h3>\n      </div>\n      <div>\n        <p><a font-weight=\"normal\"href=\"url\">Change Location </a></p>\n        <p><a font-weight=\"normal\" id=\"favorite-button\" href=\"\">Favorite</a></p>\n      </div>");
+	  $("#forecast-sum").append("<div>\n        <h8 >" + responseData.current_weather.summary + "</h8></br>\n        <h8 id = \"temp\">" + responseData.current_weather.temperature + "&deg</h8>\n        <p>High:" + today.temp_high + "&deg Low:" + today.temp_low + "&deg</p>\n      </div>\n      <div>\n      <h3>" + location + "</h3>\n      </div>\n      <div>\n        <p><a font-weight=\"normal\"href=\"url\">Change Location </a></p>\n        <p><a font-weight=\"normal\" id=\"favorite-button\" href=\"\">Favorite</a></p>\n      </div>");
 	}
 
 	function createWeatherDetails(detailData) {
 	  var currentForecast = detailData.current_weather;
 	  var today = detailData.daily_weather[0];
 	  var tonight = detailData.hourly_weather[6];
-	  $("#forecast-details").append("<div>\n        <h2>Details</h2>\n        <h3 id=\"test-id\">" + currentForecast.summary + "</h3></br>\n        <p>Today: " + today.summary + "</p>\n        <p>Tonight: " + tonight.summary + "</p>\n         </div>\n         <div>\n         <p>Feels Like: " + currentForecast.feels_like + "&deg</p>\n         <p>Humidity: " + currentForecast.humidity + "%</p>\n         <p>Visibility: " + currentForecast.visibility + " miles</p>\n         <p>Uv Index: " + currentForecast.uv_index + "</p>\n         </div>");
+	  $("#forecast-details").append("<div>\n        <h2>Details</h2>\n        <div><i class=\"wi wi-snow\"></i></div>\n\n        <h3 id=\"test-id\">" + currentForecast.summary + "</h3></br>\n        <p>Today: " + today.summary + "</p>\n        <p>Tonight: " + tonight.summary + "</p>\n         </div>\n         <div>\n         <p>Feels Like: " + currentForecast.feels_like + "&deg</p>\n         <p>Humidity: " + currentForecast.humidity + "%</p>\n         <p>Visibility: " + currentForecast.visibility + " miles</p>\n         <p>Uv Index: " + currentForecast.uv_index + "</p>\n         </div>");
 	}
 
 	function createHourlySummary(hourlyData) {
