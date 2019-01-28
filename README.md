@@ -34,6 +34,8 @@ To contribute to this project please fork and submit a pull request
 * https://www.spikenow.com/?ref=lapaninja
 * http://wthr.co/
 * https://icosyndicate.org/?ref=lapaninjahttps://icosyndicate.org/?ref=lapaninjahttps://icosyndicate.org/?ref=lapaninja
+### Screenshots
+https://github.com/tmaria17/sweater-weather-fe/blob/master/example.png
 ## Built With
 
 * [JavaScript](https://www.javascript.com/)
