@@ -1,7 +1,7 @@
 # Self-Directed Front-End Start Kit
 ## Introduction
  This project is a one page weather app that consumes a ruby on rails backend. SweatherWeather will give your details on your current weather condiotns, as well as an hourly summary and a weekly summary based on the location the user enters.
-See it deployed here: https://tmaria17.github.io/sweater-weather-fe/
+See it deployed here: https://tmaria17.github.io/sweater-weather-fe/   <br>
 Checkout the backend here: https://github.com/tmaria17/sweater-weather
 
 This app is the first solo project of the fouth modul of the Turing School of Software and design, the purpose of this project was to expose students to building a JavaScript frontend.
