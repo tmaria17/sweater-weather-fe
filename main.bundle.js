@@ -63,6 +63,7 @@
 	        createHourlySummary(weatherData);
 	        createWeeklyOverview(weatherData);
 	        addFavorite();
+	        delFavorite();
 	      }
 	    });
 	  });
@@ -85,13 +86,30 @@
 	  });
 	}
 
+	function delFavorite() {
+	  $("#delete-button").on('click', function (event) {
+	    event.preventDefault();
+	    event.stopPropagation();
+	    console.log("click");
+	    var location = document.getElementById("location-field").value;
+	    $.ajax({
+	      type: "DELETE",
+	      url: "https://safe-reaches-47529.herokuapp.com/api/v1/favorites",
+	      data: { api_key: "ALIwoEoZo_Rr92Fj5GlCYg", location: location },
+	      success: function success(result) {
+	        alert(location + " has been deleted from your favorites!");
+	      }
+	    });
+	  });
+	}
+
 	function createWeatherOverview(responseData) {
 	  console.log(responseData);
 
 	  var today = responseData.daily_weather[0];
 	  var location = document.getElementById("location-field").value;
 	  var date = new Date();
-	  $("#forecast-sum").append("<div>\n        <h8 >" + responseData.current_weather.summary + "</h8></br>\n        <h8 id = \"temp\">" + responseData.current_weather.temperature + "&deg</h8>\n        <p>High:" + today.temp_high + "&deg Low:" + today.temp_low + "&deg</p>\n      </div>\n      <div>\n      <h3>" + location + "</h3>\n      </div>\n      <div>\n        <p><a font-weight=\"normal\"href=\"url\">Change Location </a></p>\n        <p><a font-weight=\"normal\" id=\"favorite-button\" href=\"\">Favorite</a></p>\n      </div>");
+	  $("#forecast-sum").append("<div>\n        <h8 >" + responseData.current_weather.summary + "</h8></br>\n        <h8 id = \"temp\">" + responseData.current_weather.temperature + "&deg</h8>\n        <p>High:" + today.temp_high + "&deg Low:" + today.temp_low + "&deg</p>\n      </div>\n      <div>\n      <h3>" + location + "</h3>\n      </div>\n      <div>\n        <p><a font-weight=\"normal\" id=\"favorite-button\" href=\"\">Favorite</a></p>\n        <p><a font-weight=\"normal\" id=\"delete-button\" href=\"\"> Delete Favorite</a></p>\n\n      </div>");
 	}
 
 	function createWeatherDetails(detailData) {
