@@ -37,7 +37,7 @@ To contribute to this project please fork and submit a pull request
 * http://wthr.co/
 * https://icosyndicate.org/?ref=lapaninjahttps://icosyndicate.org/?ref=lapaninjahttps://icosyndicate.org/?ref=lapaninja
 ### Screenshots
-![screenshot](https://raw.github.com/tmaria17/sweater-weather-fe/master/example.png)
+![screenshot of projects](https://raw.githubusercontent.com/tmaria17/sweater-weather-fe/master/example.png)
 
 
 ## Built With
