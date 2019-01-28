@@ -4,7 +4,7 @@
 See it deployed here: https://tmaria17.github.io/sweater-weather-fe/   <br>
 Checkout the backend here: https://github.com/tmaria17/sweater-weather
 
-This app is the first solo project of the fouth modul of the Turing School of Software and design, the purpose of this project was to expose students to building a JavaScript frontend.
+This app is the first solo project of the fouth module of the Turing School of Software and design, the purpose of this project was to expose students to building a JavaScript frontend.
 
 
 ## How to Use
@@ -35,7 +35,9 @@ To contribute to this project please fork and submit a pull request
 * http://wthr.co/
 * https://icosyndicate.org/?ref=lapaninjahttps://icosyndicate.org/?ref=lapaninjahttps://icosyndicate.org/?ref=lapaninja
 ### Screenshots
-https://github.com/tmaria17/sweater-weather-fe/blob/master/example.png
+(https://raw.github.com/tmaria17/sweater-weather-fe/master/example.png)
+
+
 ## Built With
 
 * [JavaScript](https://www.javascript.com/)
