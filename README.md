@@ -14,7 +14,7 @@ This app is the first solo project of the fouth modul of the Turing School of So
   ```shell
   git clone git@github.com:tmaria17/sweater-weather-fe.git
   npm install 
-  npm
+  npm start
   ```
   Visit: http://localhost:8080/ to run the application
 
