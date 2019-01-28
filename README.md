@@ -19,9 +19,9 @@ This app is the first solo project of the fouth modul of the Turing School of So
   Visit: http://localhost:8080/ to run the application
 
 ## Known Issues
- Weather Icons are not currently dynamic
- Error messaging needs to be added
- Time and Date need formatting
+ * Weather Icons are not currently dynamic
+ * Error messaging needs to be added
+ * Time and Date need formatting
 ## How to Contribute 
 To contribute to this project please fork and submit a pull request
 
