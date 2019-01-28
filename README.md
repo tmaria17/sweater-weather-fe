@@ -1,4 +1,4 @@
-# Self-Directed Front-End Start Kit
+# Sweater Weather
 ## Introduction
  This project is a one page weather app that consumes a ruby on rails backend. SweatherWeather will give your details on your current weather condiotns, as well as an hourly summary and a weekly summary based on the location the user enters.
 See it deployed here: https://tmaria17.github.io/sweater-weather-fe/   <br>
