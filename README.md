@@ -28,14 +28,6 @@ To contribute to this project please fork and submit a pull request
 ## Core Contributers 
 [Maria Torres](https://github.com/tmaria17)
 
-## Tech Stack
-  
-* [JavaScript](https://www.javascript.com/)
-* [jQuery](https://jquery.com/)
-* [Express](https://expressjs.com/)
-* [Mocha](https://mochajs.org/)
-* [Chai](https://chaijs.com/)
-
 ## UI/UX
 ### I used these sites for inspiration: 
 * https://www.crowdrise.com/ 
