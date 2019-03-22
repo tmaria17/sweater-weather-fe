@@ -6,7 +6,6 @@ Checkout the backend here: https://github.com/tmaria17/sweater-weather
 
 This app is the first solo project of the fouth module of the Turing School of Software and design, the purpose of this project was to expose students to building a JavaScript frontend.
 
-This project is a work in progress. 
 
 
 ## How to Use
